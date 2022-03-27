@@ -8,5 +8,5 @@ resources:
   - service.yaml
   - hpa.yaml
   - ingress.yaml
-  # - namespace.yaml
+  - namespace.yaml
 
