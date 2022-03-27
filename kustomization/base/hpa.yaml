@@ -1,0 +1,14 @@
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  labels:
+    app : sample-app
+  name: sample-app
+spec:
+  maxReplicas: 10
+  minReplicas: 1
+  scaleTargetRef:
+    apiVersion: argoproj.io/v1alpha1
+    kind: Deployment
+    name: sample-app
+  targetCPUUtilizationPercentage: 80
