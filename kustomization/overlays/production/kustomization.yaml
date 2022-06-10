@@ -9,4 +9,4 @@ images:
 resources:
 - ../../base
 
-nameSuffix: -dev
+nameSuffix: -production
