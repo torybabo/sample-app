@@ -8,5 +8,6 @@ images:
   newTag: blue
 resources:
 - ../../base
-
+patchesStrategicMerge:
+- ingress.yaml
 nameSuffix: -develop
