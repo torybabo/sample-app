@@ -5,7 +5,7 @@ commonLabels:
   app: sample-app
 images:
 - name: argoproj/rollouts-demo
-  newTag: blue
+  newTag: green
 resources:
 - ../../base
 # patchesStrategicMerge:
