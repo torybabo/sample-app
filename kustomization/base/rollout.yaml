@@ -1,5 +1,5 @@
-apiVersion: apps/v1
-kind: Deployment
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
 metadata:
   name: sample-app
 spec:
@@ -10,10 +10,15 @@ spec:
     matchLabels:
       app: sample-app
   strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
+    canary:
+      maxSurge: 30%
+      maxUnavailable: 0
+      steps:
+      - setWeight: 10
+      - pause: {}
+      - setWeight: 50
+      - pause: {}
+      - setWeight: 100
   template:
     metadata:
       labels:
