@@ -7,6 +7,7 @@ images:
 - name: argoproj/rollouts-demo
   newTag: blue
 resources:
-- ../../base
+- deployment.yaml
+- service.yaml
 
 nameSuffix: -staging
